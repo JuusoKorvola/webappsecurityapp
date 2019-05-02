@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  
+  dl
+    each announcement in announcement_list
+      dt 
+        a #{announcement.poster} #{announcement.expiration_date}
+      dd #{announcement.custom_announcement} 
+  
+  
+
+    else
+      li There are no announcements.
+  a(class='button' href='/') Back

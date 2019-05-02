@@ -1,0 +1,13 @@
+extends layout
+
+block content
+   div(class='row')
+    div(class='col col-lg-10 content')
+      h1 Welcome to #{title}!
+      p.big-para.
+          What would you like to do?
+    div(class='col-md-10 order-lg-1 order-xl-1 order-md-12 order-sm-12 order-xs-12 content')
+      a(class='button' href='/announcement/list') View announcements
+      |
+      |
+      a(class='button' href='/announcement/create') Create an announcement

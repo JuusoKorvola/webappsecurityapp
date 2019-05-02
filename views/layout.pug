@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= 'Business announcements'
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+    script(src='https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js')
+    script(src='/javascripts/libraries/rater/rater.min.js')
+    script(src='/javascripts/form_validation.js')
+    script(src='/javascripts/client_script.js')
+    link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    link(rel='stylesheet', href='/resources/demos/style.css')
+    script(src='https://code.jquery.com/jquery-1.12.4.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    script.
+      $( function() {
+      $( "#datepicker" ).datepicker();
+      } );
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content

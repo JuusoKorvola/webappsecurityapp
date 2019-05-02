@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    h1(class='display-3') #{title}
+    form(id='createAnnouncement' action='/announcement/create', method='post', autocomplete="off")
+        div
+            label(for='poster') Name:
+            input#name(type='text',autocomplete="off", placeholder='Name of poster' name='poster' required='true' value=(undefined===announcement ? '' : announcement.poster))
+        div
+            label(for='email') E-mail:
+            input#mail(type='email', autocomplete="off",placeholder='Email of poster' name='email' required='true' value=(undefined===announcement ? '' : announcement.email))
+        div
+            label(for='custom_announcement') Business announcement:
+            textarea#msg(type='textarea', autocomplete="off",placeholder='Describe your announcement' name='custom_announcement' required='true' value=(undefined===announcement ? '' : announcement.custom_announcement) )
+        div
+            label(for='expiration_date') Expiration date: 
+            input#datepicker(type='date',autocomplete="off",placeholder='Pick a date', name='expiration_date' required='false' value=(undefined===announcement ? '' : announcement.expiration_date))
+        .button
+            button(type='submit') Send your message
+
+    if errors 
+        ul
+            for error in errors
+                li!= error.msg
+
